@@ -259,14 +259,14 @@ class Position(BaseCZMLObject, Interpolatable, Deletable):
 
     def __attrs_post_init__(self):
         if all(
-                val is None
-                for val in (
-                        self.cartesian,
-                        self.cartographicDegrees,
-                        self.cartographicRadians,
-                        self.cartesianVelocity,
-                        self.reference,
-                )
+            val is None
+            for val in (
+                self.cartesian,
+                self.cartographicDegrees,
+                self.cartographicRadians,
+                self.cartesianVelocity,
+                self.reference,
+            )
         ):
             raise ValueError(
                 "One of cartesian, cartographicDegrees, cartographicRadians or reference must be given"

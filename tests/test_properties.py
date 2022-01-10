@@ -1,6 +1,7 @@
 import datetime as dt
 
 import pytest
+
 from czml3.enums import ArcTypes, ClassificationTypes, ShadowModes
 from czml3.properties import (
     ArcType,
@@ -464,8 +465,8 @@ def test_position_no_values_raises_error():
         Position()
 
     assert (
-            "One of cartesian, cartographicDegrees, cartographicRadians or reference must be given"
-            in exc.exconly()
+        "One of cartesian, cartographicDegrees, cartographicRadians or reference must be given"
+        in exc.exconly()
     )
 
 
